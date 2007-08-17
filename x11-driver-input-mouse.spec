@@ -42,6 +42,6 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_libdir}/xorg/modules/input/mouse_drv.la
 %{_libdir}/xorg/modules/input/mouse_drv.so
-#%{_mandir}/man4/mouse.4.bz2
+#%{_mandir}/man4/mouse.*
 
 
