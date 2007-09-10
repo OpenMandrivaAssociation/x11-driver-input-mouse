@@ -1,6 +1,6 @@
 Name: x11-driver-input-mouse
 Version: 1.2.2
-Release: %mkrel 1
+Release: %mkrel 2
 Summary: Xorg input driver for mice
 Group: System/X11
 URL: http://xorg.freedesktop.org
@@ -8,6 +8,7 @@ Source: http://xorg.freedesktop.org/releases/individual/driver/xf86-input-mouse-
 # open mouse twice to workaround a bug in the kernel when dealing
 # with a PS/2 mouse and an USB keuboard
 Patch0: x11-driver-input-mouse-twice.patch 
+Patch1: 0001-DontDisable3ButtonEmulation.patch
 License: MIT
 BuildRoot: %{_tmppath}/%{name}-root
 
@@ -23,6 +24,7 @@ This package provide Xorg input driver for mice.
 %prep
 %setup -q -n xf86-input-mouse-%{version}
 %patch0 -p1 -b .mouse-twice
+%patch1 -p1 -b .dont-disable-3-button-emulation
 
 %build
 %configure2_5x	--x-includes=%{_includedir}\
