@@ -1,6 +1,6 @@
 Name: x11-driver-input-mouse
-Version: 1.2.2
-Release: %mkrel 2
+Version: 1.2.3
+Release: %mkrel 1
 Summary: Xorg input driver for mice
 Group: System/X11
 URL: http://xorg.freedesktop.org
@@ -27,9 +27,7 @@ This package provide Xorg input driver for mice.
 %patch1 -p1 -b .dont-disable-3-button-emulation
 
 %build
-%configure2_5x	--x-includes=%{_includedir}\
-		--x-libraries=%{_libdir}
-
+%configure2_5x
 %make
 
 %install
@@ -44,6 +42,4 @@ rm -rf %{buildroot}
 %defattr(-,root,root)
 %{_libdir}/xorg/modules/input/mouse_drv.la
 %{_libdir}/xorg/modules/input/mouse_drv.so
-#%{_mandir}/man4/mouse.*
-
 
