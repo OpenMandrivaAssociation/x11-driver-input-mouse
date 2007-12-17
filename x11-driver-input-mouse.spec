@@ -12,7 +12,6 @@ Group: System/X11
 Source0: xf86-input-mouse-%{version}.tar.bz2
 
 License: MIT
-BuildRoot: %{_tmppath}/%{name}-root
 
 ########################################################################
 # git-format-patch master..origin/mandriva+gpl
