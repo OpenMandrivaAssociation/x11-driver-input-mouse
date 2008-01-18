@@ -20,8 +20,6 @@ Patch2: 0002-Don-t-disable-3-button-emulation-if-third-mouse-butt.patch
 Patch3: 0003-Make-sure-xf86MouseProtocolIDToName-is-of-public-v.patch
 ########################################################################
 BuildRequires: x11-util-macros		>= 1.1.5-4mdk
-#BuildRequires: gcc			>= 4.2.2
-#BuildRequires: glibc-devel		>= 2.7
 BuildRequires: libpixman-1-devel	>= 0.9.6
 BuildRequires: x11-proto-devel		>= 7.3
 BuildRequires: x11-server-devel		>= 1.4
