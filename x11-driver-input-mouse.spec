@@ -1,8 +1,6 @@
-%define debug_package	%{nil}
-
 Name: x11-driver-input-mouse
 Version: 1.2.3
-Release: %mkrel 3
+Release: %mkrel 4
 Summary: Xorg input driver for mice
 Group: System/X11
 URL: http://xorg.freedesktop.org
