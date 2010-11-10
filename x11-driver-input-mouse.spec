@@ -1,6 +1,6 @@
 Name: x11-driver-input-mouse
 Version: 1.6.0
-Release: %mkrel 2
+Release: %mkrel 3
 Summary: Xorg input driver for mice
 Group: System/X11
 URL: http://xorg.freedesktop.org
@@ -11,6 +11,8 @@ BuildRoot: %{_tmppath}/%{name}-root
 BuildRequires: x11-proto-devel >= 1.0.0
 BuildRequires: x11-server-devel >= 1.0.1
 BuildRequires: x11-util-macros >= 1.0.1
+
+Requires: x11-server-common %(xserver-sdk-abi-requires xinput)
 
 Conflicts: xorg-x11-server < 7.0
 
