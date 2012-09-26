@@ -1,6 +1,6 @@
 Name: x11-driver-input-mouse
 Version: 1.8.1
-Release: 1
+Release: 2
 Summary: Xorg input driver for mice
 Group: System/X11
 License: MIT
