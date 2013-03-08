@@ -6,7 +6,7 @@ diff -Naur xf86-input-mouse-1.8.1/src/Makefile.am xf86-input-mouse-1.8.1.tpg/src
  # TODO: -nostdlib/-Bstatic/-lgcc platform magic, not installing the .a, etc.
  @DRIVER_NAME@_drv_la_LTLIBRARIES = @DRIVER_NAME@_drv.la
 -@DRIVER_NAME@_drv_la_LDFLAGS = -module -avoid-version
-+@DRIVER_NAME@_drv_la_LDFLAGS = -module -avoid-version -lXi
++@DRIVER_NAME@_drv_la_LDFLAGS = -module -avoid-version -lX11 -lXi
  @DRIVER_NAME@_drv_ladir = @inputdir@
  
  # We have to list all the mouse drivers here, even if we don't build them, so
