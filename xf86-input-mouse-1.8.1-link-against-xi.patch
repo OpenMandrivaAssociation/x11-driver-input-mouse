@@ -1,0 +1,12 @@
+diff -Naur xf86-input-mouse-1.8.1/src/Makefile.am xf86-input-mouse-1.8.1.tpg/src/Makefile.am
+--- xf86-input-mouse-1.8.1/src/Makefile.am	2012-07-27 04:14:16.000000000 +0000
++++ xf86-input-mouse-1.8.1.tpg/src/Makefile.am	2013-03-08 17:14:43.034295610 +0000
+@@ -27,7 +27,7 @@
+ # _ladir passes a dummy rpath to libtool so the thing will actually link
+ # TODO: -nostdlib/-Bstatic/-lgcc platform magic, not installing the .a, etc.
+ @DRIVER_NAME@_drv_la_LTLIBRARIES = @DRIVER_NAME@_drv.la
+-@DRIVER_NAME@_drv_la_LDFLAGS = -module -avoid-version
++@DRIVER_NAME@_drv_la_LDFLAGS = -module -avoid-version -lxi
+ @DRIVER_NAME@_drv_ladir = @inputdir@
+ 
+ # We have to list all the mouse drivers here, even if we don't build them, so
