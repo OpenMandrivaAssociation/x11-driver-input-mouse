@@ -29,10 +29,9 @@ This package provides development files for Xord input driver for mice.
 %prep
 %setup -qn xf86-input-mouse-%{version}
 %patch0 -p1
-
+autoreconf -fiv
 
 %build
-autoreconf -fiv
 %configure2_5x
 
 %make
