@@ -14,9 +14,7 @@ BuildRequires:	x11-server-devel >= 1.12
 BuildRequires:	x11-util-macros >= 1.0.1
 BuildRequires:	pkgconfig(xi)
 
-Requires:	x11-server-common
-Requires:	%(xserver-sdk-abi-requires xinput)
-Requires:	%(xserver-sdk-abi-requires ansic)
+Requires:	x11-server-common %(xserver-sdk-abi-requires xinput) %(xserver-sdk-abi-requires ansic)
 
 Conflicts:	xorg-x11-server < 7.0
 
