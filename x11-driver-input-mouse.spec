@@ -14,8 +14,8 @@ BuildRequires:	pkgconfig(xorg-server) >= 1.12
 BuildRequires:	pkgconfig(xorg-macros)
 BuildRequires:	pkgconfig(xi)
 
-Requires:	%(xserver-sdk-abi-requires xinput)
-Requires:	%(xserver-sdk-abi-requires ansic)
+Requires:	%(xserver-sdk-abi-requires xinput || echo xserver-abi(xinput-20) >= 0)
+Requires:	%(xserver-sdk-abi-requires ansic || xserver-abi(ansic-0) >= 4)
 
 Conflicts:	xorg-x11-server < 7.0
 
