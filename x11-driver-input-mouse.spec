@@ -13,9 +13,9 @@ BuildRequires:	pkgconfig(xproto) >= 1.0.0
 BuildRequires:	pkgconfig(xorg-server) >= 1.12
 BuildRequires:	pkgconfig(xorg-macros)
 BuildRequires:	pkgconfig(xi)
-
-Requires:	%(xserver-sdk-abi-requires xinput || echo xserver-abi(xinput-20) >= 0)
-Requires:	%(xserver-sdk-abi-requires ansic || xserver-abi(ansic-0) >= 4)
+# strange deps?
+#Requires:	%(xserver-sdk-abi-requires xinput || echo xserver-abi(xinput-20) >= 0)
+#Requires:	%(xserver-sdk-abi-requires ansic || xserver-abi(ansic-0) >= 4)
 
 Conflicts:	xorg-x11-server < 7.0
 
@@ -36,7 +36,7 @@ This package provides development files for Xord input driver for mice.
 autoreconf -fiv
 
 %build
-%configure2_5x
+%configure
 
 %make
 
