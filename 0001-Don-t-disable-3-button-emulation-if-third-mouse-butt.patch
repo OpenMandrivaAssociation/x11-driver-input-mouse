@@ -1,6 +1,7 @@
---- xf86-input-mouse-1.9.0/src/mouse.c.orig	2014-03-14 15:52:33.807027550 +0100
-+++ xf86-input-mouse-1.9.0/src/mouse.c	2014-03-14 15:53:25.702328691 +0100
-@@ -2043,7 +2043,7 @@ Emulate3ButtonsSoft(InputInfoPtr pInfo)
+diff -Naur xf86-input-mouse-1.9.1/src/mouse.c xf86-input-mouse-1.9.1.tpg/src/mouse.c
+--- xf86-input-mouse-1.9.1/src/mouse.c	2014-08-12 06:36:34.000000000 +0000
++++ xf86-input-mouse-1.9.1.tpg/src/mouse.c	2014-12-14 16:30:34.062619882 +0000
+@@ -2076,7 +2076,7 @@
  {
      MouseDevPtr pMse = pInfo->private;
  
@@ -8,4 +9,4 @@
 +    if (pMse->emulate3Buttons || !pMse->emulate3ButtonsSoft)
          return TRUE;
  
-     LogMessageVerbSigSafe(X_INFO, 4, "mouse: 3rd Button detected: disabling emulate3Button\n");
+ #if defined(__NetBSD__) && defined(WSCONS_SUPPORT)
