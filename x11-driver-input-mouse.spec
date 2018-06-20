@@ -1,5 +1,5 @@
 Name:		x11-driver-input-mouse
-Version:	1.9.2
+Version:	1.9.3
 Release:	1
 Summary:	Xorg input driver for mice
 Group:		System/X11
