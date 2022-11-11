@@ -1,11 +1,11 @@
 Name:		x11-driver-input-mouse
-Version:	1.9.3
-Release:	2
+Version:	1.9.4
+Release:	1
 Summary:	Xorg input driver for mice
 Group:		System/X11
 License:	MIT
 URL:		http://xorg.freedesktop.org
-Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-mouse-%{version}.tar.bz2
+Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-mouse-%{version}.tar.xz
 Patch0:		xf86-input-mouse-1.8.1-link-against-xi.patch
 # see mdvbz#33033, do not disable!
 Patch1:		0001-Don-t-disable-3-button-emulation-if-third-mouse-butt.patch
@@ -30,23 +30,20 @@ Requires:	%{name} = %{EVRD}
 This package provides development files for Xord input driver for mice.
 
 %prep
-%setup -qn xf86-input-mouse-%{version}
-%patch0 -p1
-%patch1 -p1
+%autosetup -n xf86-input-mouse-%{version} -p1
 
 autoreconf -fiv
 
 %build
 %configure
-
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %{_libdir}/xorg/modules/input/mouse_drv.so
-%{_mandir}/man4/mousedrv.*
+%doc %{_mandir}/man4/mousedrv.*
 
 %files devel
 %{_includedir}/xorg/xf86-mouse-properties.h
