@@ -1,6 +1,6 @@
 Name:		x11-driver-input-mouse
-Version:	1.9.4
-Release:	2
+Version:	1.9.5
+Release:	1
 Summary:	Xorg input driver for mice
 Group:		System/X11
 License:	MIT
@@ -22,11 +22,11 @@ Conflicts:	xorg-x11-server < 7.0
 %description
 This package provide Xorg input driver for mice.
 
-%package	devel
+%package devel
 Summary:	Development files for Xorg mouse driver
 Requires:	%{name} = %{EVRD}
 
-%description	devel
+%description devel
 This package provides development files for Xord input driver for mice.
 
 %prep
