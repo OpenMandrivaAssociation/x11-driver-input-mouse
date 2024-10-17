@@ -4,7 +4,7 @@ Release:	1
 Summary:	Xorg input driver for mice
 Group:		System/X11
 License:	MIT
-URL:		http://xorg.freedesktop.org
+URL:		https://xorg.freedesktop.org
 Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-mouse-%{version}.tar.xz
 Patch0:		xf86-input-mouse-1.8.1-link-against-xi.patch
 # see mdvbz#33033, do not disable!
