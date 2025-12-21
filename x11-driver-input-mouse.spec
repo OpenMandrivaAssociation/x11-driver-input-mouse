@@ -9,6 +9,11 @@ Source0:	http://xorg.freedesktop.org/releases/individual/driver/xf86-input-mouse
 Patch0:		xf86-input-mouse-1.8.1-link-against-xi.patch
 # see mdvbz#33033, do not disable!
 Patch1:		0001-Don-t-disable-3-button-emulation-if-third-mouse-butt.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(xproto) >= 1.0.0
 BuildRequires:	pkgconfig(xorg-server) >= 1.12
 BuildRequires:	pkgconfig(xorg-macros)
