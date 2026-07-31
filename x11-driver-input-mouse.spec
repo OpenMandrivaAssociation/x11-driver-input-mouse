@@ -1,5 +1,5 @@
 Name:		x11-driver-input-mouse
-Version:	1.9.5
+Version:	2.0.0
 Release:	1
 Summary:	Xorg input driver for mice
 Group:		System/X11
@@ -35,7 +35,7 @@ Requires:	%{name} = %{EVRD}
 This package provides development files for Xord input driver for mice.
 
 %prep
-%autosetup -n xf86-input-mouse-%{version} -p1
+%autosetup -n xf86-input-mouse-2.0.0 -p1
 
 autoreconf -fiv
 
